@@ -1,9 +1,11 @@
 # demo
 
-1.因为时间有限只做了增查两种 没做改删\n
+1.因为时间有限只做了增查两种 没做改删   
 2.用的是jdbctemplate来访问的mysql数据库
 3.数据库三个表分别是course，student，timetable
 4.DDL:
+
+
       CREATE TABLE `course` (
         `cid` int(11) NOT NULL,
         `cName` varchar(45) NOT NULL,
