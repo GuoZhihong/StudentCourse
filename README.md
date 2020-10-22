@@ -1,4 +1,4 @@
-# Student/Course record function
+# Student/Course record
 
 1.only did add/get two methods. 
 2.used jdbc to access mysql database  
