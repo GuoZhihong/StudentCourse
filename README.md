@@ -1,8 +1,8 @@
-# demo
+# student Course record
 
-1.因为时间有限只做了要求的增查两种 没做改删   
-2.用的是jdbctemplate来访问的mysql数据库       
-3.数据库三个表分别是course，student，timetable       
+1.only did add/get two methods. 
+2.used jdbc to access mysql database  
+3.three tables are course，student，timetable       
 4.DDL:      
 
 
@@ -30,4 +30,4 @@
         PRIMARY KEY (`id`)
       ) ENGINE=MyISAM AUTO_INCREMENT=25 DEFAULT CHARSET=latin1
       
-5.理论上timetable的主键应该是sid 和 cid的联合键，我用的是自增长表id。 
+5.student/course records are added and displayed by Json format
