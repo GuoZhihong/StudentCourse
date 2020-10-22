@@ -1,8 +1,8 @@
 # Student/Course record
 
 1.only did add/get two methods.
-2.used jdbc to access mysql database  
-3.three tables are course，student，timetable       
+2.used jdbc to access mysql database.  
+3.three tables are course，student，timetable.       
 4.DDL:      
 
 
@@ -30,4 +30,4 @@
         PRIMARY KEY (`id`)
       ) ENGINE=MyISAM AUTO_INCREMENT=25 DEFAULT CHARSET=latin1
       
-5.student/course records are added and displayed by Json format
+5.student/course records are added and displayed by Json format.
