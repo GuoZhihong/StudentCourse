@@ -1,7 +1,7 @@
 package io.guozhihong.demo.model;
 
 
-public class DemoModelStudent {
+public class StudentModel {
 
     private long sid;
 
@@ -9,7 +9,7 @@ public class DemoModelStudent {
     private String sSex;
     private int sAge;
 
-    public DemoModelStudent() {
+    public StudentModel() {
     }
 
     public long getSid() {

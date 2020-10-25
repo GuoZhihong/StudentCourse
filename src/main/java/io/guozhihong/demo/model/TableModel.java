@@ -1,12 +1,17 @@
 package io.guozhihong.demo.model;
 
 
-public class DemoModelTable {
+public class TableModel {
     private long id;
     private long sid;
     private long cid;
 
-    public DemoModelTable() {
+    public TableModel() {
+    }
+
+    public TableModel(long sid, long cid) {
+        this.sid = sid;
+        this.cid = cid;
     }
 
     public long getId() {

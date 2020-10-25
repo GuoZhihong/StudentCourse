@@ -3,13 +3,13 @@ package io.guozhihong.demo.model;
 
 
 
-public class DemoModelCourse {
+public class CourseModel {
 
     private long cid;
 
     private String cName;
 
-    public DemoModelCourse() {
+    public CourseModel() {
     }
 
     public long getCid() {
