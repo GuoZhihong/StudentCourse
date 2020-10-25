@@ -1,6 +1,6 @@
-# Student/Course record
+# Student/Course/timetable records
 
-version 1:
+# version 1.0:  
 1.only did add/get two methods.     
 2.used jdbc to access mysql database.  
 3.three tables are course，student，timetable.       
@@ -32,3 +32,6 @@ version 1:
       ) ENGINE=MyISAM AUTO_INCREMENT=25 DEFAULT CHARSET=latin1
       
 5.student/course records are added and displayed by Json format.
+
+# version 2.0: 
+
