@@ -32,6 +32,7 @@
       ) ENGINE=MyISAM AUTO_INCREMENT=25 DEFAULT CHARSET=latin1
       
 5.student/course records are added and displayed by Json format.
+6.mysql port:3306 user:root password:
 
 # version 2.0: 
 1.implements delete and update two more features including delete single record, delete all records,update single value,update some values.     
