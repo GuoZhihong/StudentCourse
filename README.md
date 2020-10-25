@@ -1,5 +1,6 @@
 # Student/Course record
 
+version 1:
 1.only did add/get two methods.     
 2.used jdbc to access mysql database.  
 3.three tables are course，student，timetable.       
