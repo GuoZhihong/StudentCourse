@@ -34,4 +34,7 @@
 5.student/course records are added and displayed by Json format.
 
 # version 2.0: 
-
+1.implements delete and update two more features including delete single record, delete all records,update single value,update some values.
+2.improves the MVC structure, much more reduce the code couplings and improve the code cohesions.
+3.improves data integrity by adding locks to all add,updata,delete operations.
+4.changes output to English.
