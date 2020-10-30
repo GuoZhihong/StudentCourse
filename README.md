@@ -1,7 +1,7 @@
 # Student/Course/timetable records
-implemented restful apis get/post/put/delete 
+implemented restful api get/post/put/delete 4 methods
 
-# version 1.0/2.0: refer to branch master()  
+# version 1.0/2.0 uses jdbctemplate can refer to branch master(https://github.com/GuoZhihong/StudentCourse/tree/master)  
 
 # version 3.0:  
 1.replaced jdbc with data jpa,which will automatically create tables,some feature used own sql sentences or query methods .    
