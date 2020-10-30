@@ -8,6 +8,7 @@
 2.improved code similicity with lombok anotations.     
 3.added some atributes in some tables     
 4.table_student_course table's primary key now is a composite primary key with student id and course id from those tables.     
+5.table_student_course table now only can update time atribute because its student id and course id now is a composite primary key from table student/course.
 
 
 
