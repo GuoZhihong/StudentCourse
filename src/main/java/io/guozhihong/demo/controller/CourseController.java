@@ -21,7 +21,7 @@ public class CourseController {
 
     @PostMapping("/courses/add")
     @ResponseBody
-    public String addCourse(@RequestBody CourseModel course){
+    public String addCourse(@RequestBody CourseModel course){//这里传进来的Json参数必须和model里的命名一致
         return courseService.add(course);
     }
 

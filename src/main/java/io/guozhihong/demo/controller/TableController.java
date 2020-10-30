@@ -33,13 +33,9 @@ public class TableController {
         return tableService.deleteAll();
     }
 
-    @PutMapping("table/update/student")
-    public String updateStudent(@RequestParam("cid") Long cid, @RequestParam("sid") Long sid,@RequestParam("newsid") Long newSid){
-        return tableService.updateStudent(sid,cid,newSid);
-    }
-
-    @PutMapping("table/update/course")
-    public String updateCourse(@RequestParam("sid") Long sid, @RequestParam("cid") Long cid,@RequestParam("newcid") Long newCid){
-        return tableService.updateCourse(sid,cid,newCid);
+    @PutMapping("table/update")
+    @ResponseBody
+    public String update(@RequestBody TableModel tableModel){
+        return tableService.update(tableModel);
     }
 }

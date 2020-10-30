@@ -1,46 +1,26 @@
 package io.guozhihong.demo.model;
 
 
-public class StudentModel {
+import lombok.Getter;
+import lombok.Setter;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Setter
+@Getter
+
+@Entity
+@Table(name = "student")
+public class StudentModel {
+    @Id
     private long sid;
 
-    private String sName;
-    private String sSex;
-    private int sAge;
+    @Column
+    private String s_name;
+    private String s_sex;
+    private int s_age;
 
-    public StudentModel() {
-    }
-
-    public long getSid() {
-        return sid;
-    }
-
-    public void setSid(long sid) {
-        this.sid = sid;
-    }
-
-    public String getsName() {
-        return sName;
-    }
-
-    public void setsName(String sName) {
-        this.sName = sName;
-    }
-
-    public String getsSex() {
-        return sSex;
-    }
-
-    public void setsSex(String sSex) {
-        this.sSex = sSex;
-    }
-
-    public int getsAge() {
-        return sAge;
-    }
-
-    public void setsAge(int sAge) {
-        this.sAge = sAge;
-    }
 }

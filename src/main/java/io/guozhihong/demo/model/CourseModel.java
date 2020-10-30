@@ -2,29 +2,26 @@ package io.guozhihong.demo.model;
 
 
 
+import lombok.Getter;
+import lombok.Setter;
 
+import javax.persistence.*;
+
+@Setter
+@Getter
+
+@Entity
+@Table(name = "course") //自定义table名
 public class CourseModel {
 
-    private long cid;
+    @Id //主键
+    private Long cid;
 
-    private String cName;
+    @Column(name = "c_name")//自定义表里column名字
+    private String c_name;
+    @Column(name = "credits")
+    private Double credits;
+    @Column(name = "lecturer")
+    private String lecturerName;
 
-    public CourseModel() {
-    }
-
-    public long getCid() {
-        return cid;
-    }
-
-    public void setCid(long cid) {
-        this.cid = cid;
-    }
-
-    public String getcName() {
-        return cName;
-    }
-
-    public void setcName(String cName) {
-        this.cName = cName;
-    }
 }

@@ -41,23 +41,25 @@ public class StudentController {
         return studentService.deleteAll();
     }
 
-    @PutMapping("/students/update/name")
-    public String updateName(@RequestParam("sid") Long sid,@RequestParam("sName") String sName){
-        return studentService.updateName(sid,sName);
-    }
-
-    @PutMapping("/students/update/sex")
-    public String updateSex(@RequestParam("sid") Long sid,@RequestParam("sSex") String sSex){
-        return studentService.updateSex(sid,sSex);
-    }
-    @PutMapping("/students/update/age")
-    public String updateAge(@RequestParam("sid") Long sid,@RequestParam("sAge") Integer sAge){
-        return studentService.updateAge(sid,sAge);
-    }
-
     @PutMapping("/students/update")
     @ResponseBody
     public String update(@RequestBody StudentModel student){
         return studentService.update(student);
     }
+
+    @PutMapping("/students/update/name")
+    public String updateName(@RequestParam("sid") Long sid,@RequestParam("s_name") String s_name){
+        return studentService.updateName(sid,s_name);
+    }
+
+    @PutMapping("/students/update/sex")
+    public String updateSex(@RequestParam("sid") Long sid,@RequestParam("s_sex") String s_sex){
+        return studentService.updateSex(sid,s_sex);
+    }
+    @PutMapping("/students/update/age")
+    public String updateAge(@RequestParam("sid") Long sid,@RequestParam("s_age") Integer s_age){
+        return studentService.updateAge(sid,s_age);
+    }
+
+
 }
