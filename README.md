@@ -1,5 +1,5 @@
 # Student/Course/timetable records
-implemented restful api for get/post/put/delete 4 methods, the passing data format is JSON.
+Implemented restful api for get/post/put/delete 4 methods, the passing data format is JSON. The user can search for a student taking what courses, and a course is taking by whom.
 
 # version 1.0/2.0 uses jdbctemplate can refer to branch master
 https://github.com/GuoZhihong/StudentCourse/tree/master  
