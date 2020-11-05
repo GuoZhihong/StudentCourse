@@ -1,4 +1,4 @@
-# Student/Course/timetable records
+# Student/Course/Timetable records
 Implemented RESTful api for _GET/POST/PUT/DELETE_ 4 web services, the passing data format is _JSON_ or _parameters_.         
 
 _GET feature_ lets the user can search for a student who is taking what courses and its information by student Id, or a course is taking by whom by course id, or search for all students/courses/timetables' records.         
