@@ -12,7 +12,7 @@ _PUT feature_ allows the user to update records by thier relevant Id.
 # version 1.0/2.0 uses jdbctemplate can refer to branch master
 https://github.com/GuoZhihong/StudentCourse/tree/master  
 
-# version 3.0:  
+# Version 3.0:  
 1.replaced _JDBC_ with _Spring Data Jpa_,which will automatically create tables,some feature used own sql sentences or query methods .    
 2.improved code similicity with lombok anotations.     
 3.added some atributes in some tables.      
