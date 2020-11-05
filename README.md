@@ -1,5 +1,9 @@
 # Student/Course/timetable records
-Implemented restful api for get/post/put/delete 4 methods, the passing data format is JSON. The user can search for a student taking what courses, and a course is taking by whom.
+Implemented restful api for # get/post/put/delete 4 methods, the passing data format is JSON.
+The user can search for a student who is taking what courses and its information by student Id, or a course is taking by whom by course id, or search for all students/courses/timetables' records. 
+Add feature allows the user to add student/course/timetable records.
+Delete feature allows the user to delete single row of records or wipe out all records.
+Put feature allows the user to update records by Its relevant Id.
 
 # version 1.0/2.0 uses jdbctemplate can refer to branch master
 https://github.com/GuoZhihong/StudentCourse/tree/master  
