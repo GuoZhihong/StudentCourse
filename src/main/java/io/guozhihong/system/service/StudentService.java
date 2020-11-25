@@ -1,17 +1,17 @@
-package io.guozhihong.demo.service;
+package io.guozhihong.system.service;
 
-import io.guozhihong.demo.model.CourseModel;
-import io.guozhihong.demo.model.StudentModel;
-import io.guozhihong.demo.repo.StudentRepo;
+
+import io.guozhihong.system.model.CourseModel;
+import io.guozhihong.system.model.StudentModel;
+import io.guozhihong.system.repo.StudentRepo;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
 @Service
-public class StudentService {
+public class StudentService implements io.guozhihong.system.service.Service {
     @Autowired
     private StudentRepo studentRepo;
     @Autowired
@@ -41,35 +41,28 @@ public class StudentService {
 
     @Transactional
     public String getStudentCourses(Long sid){
-        if(studentRepo.existsById(sid)){//Jpa 定义好的方法
-            String s = "student name： " + findById(sid).getS_name() +
-                    "\n student id ： " + findById(sid).getSid() +
-                    "\n selected courses：\n" ;
-            List<CourseModel> courses = tableService.searchCourseBySid(sid);
-            if(courses.size() == 0){
-                s += "\t\t\t\t\tnone";
-            }else {
-                for (int i = 0; i < courses.size(); i++) {
-                    s += "\t\t\t\t\t" + courses.get(i).getCid() + "\t\t" + courses.get(i).getC_name() + "\n";
-                }
-            }
-            return s;
+        String s = "student name： " + findById(sid).getS_name() +
+                "\n student id ： " + findById(sid).getSid() +
+                "\n selected courses：\n" ;
+        List<CourseModel> courses = tableService.searchCourseBySid(sid);
+        if(courses.size() == 0){
+            s += "\t\t\t\t\tnone";
         }else {
-            return "student does not exist.";
+            for (int i = 0; i < courses.size(); i++) {
+                s += "\t\t\t\t\t" + courses.get(i).getCid() + "\t\t" + courses.get(i).getC_name() + "\n";
+            }
         }
+        return s;
     }
+
 
     @Transactional
     synchronized public String deleteStudent(Long sid){
-        if(studentRepo.existsById(sid)){//Jpa 定义好的方法
-            String s = "Student name : " + findById(sid).getS_name() +" Student id: " +
-                    findById(sid).getSid() +" has been deleted.";
-            tableService.deleteStudent(sid);//删除某个学生必须从选课表里把该学生所有记录都删除 //Jpa 定义好的方法
-            studentRepo.deleteById(sid);//Jpa 定义好的方法
-            return s;
-        }else {
-            return "This student does not exist.";
-        }
+        String s = "Student name : " + findById(sid).getS_name() +" Student id: " +
+                findById(sid).getSid() +" has been deleted.";
+        tableService.deleteStudent(sid);//删除某个学生必须从选课表里把该学生所有记录都删除 //Jpa 定义好的方法
+        studentRepo.deleteById(sid);//Jpa 定义好的方法
+        return s;
     }
 
     @Transactional

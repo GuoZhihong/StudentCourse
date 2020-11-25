@@ -1,7 +1,7 @@
-package io.guozhihong.demo.repo;
+package io.guozhihong.system.repo;
 
 
-import io.guozhihong.demo.model.CourseModel;
+import io.guozhihong.system.model.CourseModel;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

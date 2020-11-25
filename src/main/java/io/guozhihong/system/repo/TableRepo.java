@@ -1,8 +1,8 @@
-package io.guozhihong.demo.repo;
+package io.guozhihong.system.repo;
 
 
 
-import io.guozhihong.demo.model.TableModel;
+import io.guozhihong.system.model.TableModel;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;

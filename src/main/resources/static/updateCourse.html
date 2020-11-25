@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<header>
+    <script type="text/javascript">
+        function nullId(){
+            let cid = document.getElementById('cid').value;
+            let cname = document.getElementById('cname').value;
+            let ccredit = document.getElementById('ccredit').value;
+            let clecturer = document.getElementById('clecturer').value;
+            if(cid === '' || cname === '' ||ccredit === '' || clecturer === ''){
+                return true;
+            }else {
+                return false;
+            }
+        }
+        function submit(){
+            if(nullId()){
+               alert("Null record entered");
+            }else {
+                return onsubmit(document.getElementById("form").value);
+            }
+        }
+    </script>
+</header>
+<body>
+<h1>Update Course Information</h1>
+<form id="form" method="post">
+    <span>Course id:</span> <input type= "text" id="cid"><br>
+    <span>Course name:</span> <input type="text" id="cname"><br>
+    <span>Course credit:</span> <input type="text" id="ccredit"><br>
+    <span>Course lecturer:</span> <input type="text" id="clecturer"><br>
+</form>
+<button type="submit" onclick = "submit()">update</button>
+</body>

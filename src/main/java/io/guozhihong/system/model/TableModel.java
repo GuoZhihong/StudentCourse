@@ -1,4 +1,4 @@
-package io.guozhihong.demo.model;
+package io.guozhihong.system.model;
 
 
 

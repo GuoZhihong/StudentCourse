@@ -1,12 +1,16 @@
-package io.guozhihong.demo.controller;
+package io.guozhihong.system.controller;
 
-import io.guozhihong.demo.model.CourseModel;
-import io.guozhihong.demo.service.CourseService;
+
+import io.guozhihong.system.model.CourseModel;
+import io.guozhihong.system.service.CourseService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@Slf4j
+@RequestMapping("/system/courses")
 @RestController
 public class CourseController {
 
@@ -14,35 +18,41 @@ public class CourseController {
     private CourseService courseService;
 
 
-    @GetMapping("/courses")
+    @GetMapping("/all")
     public List<CourseModel> getCourses(){
         return courseService.findAll();
     }
 
-    @PostMapping("/courses/add")
+    @PostMapping("/add")
     @ResponseBody
     public String addCourse(@RequestBody CourseModel course){//这里传进来的Json参数必须和model里的命名一致
         return courseService.add(course);
     }
 
-    @DeleteMapping("/courses/del/{cid}")
+    @DeleteMapping("/del/{cid}")
     public String deleteCourse(@PathVariable Long cid){
         return courseService.deleteCourse(cid);
     }
 
-    @DeleteMapping("/courses/del/all")
+    @DeleteMapping("/del/all")
     public String deleteAll(){//"!非常危险"
         return courseService.deleteAll();
     }
 
-    @PutMapping("/courses/update")
+    @PutMapping("/update")
     @ResponseBody
     public String update(@RequestBody CourseModel course){
         return courseService.update(course);
     }
 
-    @GetMapping("/courses/search/{cid}")
+    @GetMapping("/search/{cid}")
     public String getCourseStudents(@PathVariable Long cid){
         return courseService.getCourseStudents(cid);
+    }
+
+    @GetMapping ("/invalidId")
+    public String invalidId(){
+        log.info("filter success");
+        return "Course Id does not exist";
     }
 }

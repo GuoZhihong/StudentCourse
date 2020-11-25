@@ -1,4 +1,4 @@
-package io.guozhihong.demo.model;
+package io.guozhihong.system.model;
 
 
 
@@ -6,13 +6,14 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.io.Serializable;
 
 @Setter
 @Getter
 
 @Entity
 @Table(name = "course") //自定义table名
-public class CourseModel {
+public class CourseModel implements Serializable {
 
     @Id //主键
     private Long cid;

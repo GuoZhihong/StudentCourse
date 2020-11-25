@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<header>
+    <script type="text/javascript">
+        function nullId(){
+            let sid = document.getElementById('sid').value;
+            if(sid === ''){
+                return true;
+            }else {
+                return false;
+            }
+        }
+        function submit(){
+            if(nullId()){
+                alert("Null id entered");
+            }else {
+                return onsubmit(document.getElementById("form").value);
+            }
+        }
+    </script>
+</header>
+<body>
+<h1>Update Student Information</h1>
+<form method="post" id="form">
+    <span >Student id:</span> <input type="text" id="sid"><br>
+    <span >Student name:</span> <input type="text" id ="sname"><br>
+    <span >Student sex:</span> <input type="text" id="ssex"><br>
+    <span >Student age:</span> <input type="text" id="sage"><br>
+</form>
+    <button onclick="submit()">update</button>
+</body>

@@ -1,9 +1,10 @@
-package io.guozhihong.demo.service;
+package io.guozhihong.system.service;
 
-import io.guozhihong.demo.model.CourseModel;
-import io.guozhihong.demo.model.StudentModel;
-import io.guozhihong.demo.model.TableModel;
-import io.guozhihong.demo.repo.TableRepo;
+
+import io.guozhihong.system.model.CourseModel;
+import io.guozhihong.system.model.StudentModel;
+import io.guozhihong.system.model.TableModel;
+import io.guozhihong.system.repo.TableRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -12,7 +13,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Service
-public class TableService {
+public class TableService implements io.guozhihong.system.service.Service {
 
     @Autowired
     private TableRepo tableRepo;
@@ -38,7 +39,7 @@ public class TableService {
                 TableModel t = tableRepo.saveAndFlush(table);
                 return "add course id: " + t.getCid()+ " to student id: " + t.getSid();
             }else {
-                return "this course id has been already selected by this student id";
+                return "This course id has been already selected by this student id.";
             }
         }
     }
@@ -50,7 +51,7 @@ public class TableService {
             tableRepo.deleteBySidAndCid(sid,cid);
             return "delete course id： " + cid +" from student id " + sid;
         }else {
-            return "this timetable record dose not exist.";
+            return "This timetable record dose not exist.";
         }
     }
 
@@ -74,7 +75,7 @@ public class TableService {
                 return s;
             }
         }else {
-            return "input student id or course id does not exist";
+            return "Input student id or course id does not exist.";
         }
     }
 

@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+<header>
+    <meta charset="UTF-8" />
+    <script type="text/javascript">
+        function findSid(){
+            let url = '/system/students/search/' + document.getElementById('sid').value;
+            window.location.reload();
+            window.location.replace(url);
+        }
+        function findCid(){
+            let url = '/system/courses/search/' + document.getElementById('cid').value;
+            window.location.reload();
+            window.location.replace(url);
+        }
+        function deleteSid(){
+            let url = '/system/students/del/' + document.getElementById('sid').value;
+            window.location.reload();
+            let xmlhttp = new XMLHttpRequest();
+            xmlhttp.open("DELETE",url,true);
+            xmlhttp.send();
+            window.location.replace(url);//跳转到链接并且停留
+        }
+        function deleteCid(){
+            let url = '/system/courses/del/' + document.getElementById('cid').value;
+            window.location.reload();
+            let xmlhttp = new XMLHttpRequest();
+            xmlhttp.open("DELETE",url,true);
+            xmlhttp.send();
+            window.location.replace(url);
+        }
+    </script>
+</header>
+<body>
+<h1>Home Page</h1>
+<h2>Here are some options:</h2><br>
+<h3>
+    Looking for all students records, click <a href="/system/students/all">here</a><br>
+</h3>
+<h3>
+    Looking for all courses records, click <a href="/system/courses/all">here</a><br>
+</h3>
+<h3>
+    Looking for all timetable records, click <a href="/system/tables/all">here</a><br>
+</h3>
+<h3>
+    Student id <input type="text" id="sid"><button type="button" onclick= "findSid()"> Search</button>
+    <button onclick="deleteSid()"> Delete</button>
+</h3>
+<h3>
+    Course id <input type="text" id="cid"><button value="Search" onclick="findCid()">Search</button>
+    <button onclick="deleteCid()">Delete</button>
+</h3>
+<h3><a href ="updateStudent.html"><strong>Update student</strong></a><br></h3>
+<h3><a href ="updateCourse.html"><strong>Update course</strong></a><br></h3>
+<h3><a href="updateTimetable.html"><strong>Update timetable</strong></a></h3>
+</body>
+</HTML>
+

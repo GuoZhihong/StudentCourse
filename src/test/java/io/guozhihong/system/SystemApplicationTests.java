@@ -1,10 +1,12 @@
-package io.guozhihong.demo;
+package io.guozhihong.system;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class DemoApplicationTests {
+class SystemApplicationTests {
+
+
 
     @Test
     void contextLoads() {
