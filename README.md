@@ -9,6 +9,14 @@ _DELETE feature_ allows the user to delete single row of records or wipe out all
 
 _PUT feature_ allows the user to update records by thier relevant Id.       
 
+Example URL:     
+http://localhost:8080/system/students/all   
+http://localhost:8080/system/students/add
+http://localhost:8080/system/students/search/{sid}  
+http://localhost:8080/system/students/del
+http://localhost:8080/system/students/update    
+http://localhost:8080/system/students/update/name?sid=xx&sname=xx   
+
 # version 1.0/2.0 uses jdbctemplate can refer to branch master
 https://github.com/GuoZhihong/StudentCourse/tree/master  
 
@@ -19,3 +27,17 @@ https://github.com/GuoZhihong/StudentCourse/tree/master
 4.table_student_course table's primary key now is a composite primary key with student id and course id from those tables.     
 5.table_student_course table now only can update time atribute because its student id and course id now is a composite primary key from table student/course.
 
+# Version 4.0:
+1. added a redirected interceptor to intercept invalid URL like http://localhost:8080/xxx or http://localhost:8080/system/students/xxx.             
+2. added a Record filter to filter requiring of the invalid records.    
+3. built a homepage for redirection of invalid URL and forwarding to the correct URL        
+4. A simple UI for a few requests (incomplete).     
+
+Homepage:
+![homepage](src/main/resources/templates/1606279389.png)
+
+Redirect to correct URL:    
+![all](src/main/resources/templates/1606279557(1).png)
+
+Filter to filter the non existed records:      
+![filter](src/main/resources/templates/1606279807(1).png)
